@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #search-result img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        /* border-radius: 5px; */
+      }
+    </style>
+
+    <title>Image Search Engine</title>
+  </head>
+  <body class="bg-purple-800 text-white">
+    <h1 class="text-2xl text-center my-16 mx-auto font-bold">
+      Image Search Engine
+    </h1>
+
+    <form
+      class="w-11/12 max-w-2xl mx-auto bg-indigo-800 h-14 flex items-center rounded-md"
+      id="search-form"
+    >
+      <input
+        class="overflow-x-hidden flex-1 h-full outline-none bg-transparent text-white px-7 placeholder:text-white text-lg"
+        type="text"
+        id="search-box"
+        placeholder="Search Anything..."
+      />
+      <button
+        class="px-10 h-full bg-red-600 text-lg rounded-r-md cursor-pointer"
+        type="submit"
+      >
+        Search
+      </button>
+    </form>
+    <div
+      id="search-result"
+      class="w-4/5 my-24 mx-auto grid grid-cols-1 sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-10"
+    ></div>
+    <button
+      class="px-5 py-2.5 rounded-sm h-full bg-blue-500 text-lg cursor-pointer mx-auto my-1.5 cursor-pointer hidden"
+      type="submit"
+      id="show-more"
+    >
+      Load More
+    </button>
+  </body>
+  <script src="script.js"></script>
+</html>
